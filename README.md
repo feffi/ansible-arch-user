@@ -7,7 +7,18 @@ Ansible role to configure/add a user.
 ## Role Defaults Variables
 
 ```yaml
-user:
+user: {
+  name: "feffi",
+  password: "SOMEPASSWORD",
+  group: "feffi",
+  groups: [
+    "uucp",
+    "wheel",
+    "games",
+    "rfkill"
+  ],
+  shell: "/usr/bin/zsh"
+}
 
 ```
 
@@ -17,6 +28,15 @@ Example:
 - hosts: all
   vars:
     user:
+      name: "feffi"
+      password: "SOMEPASSWORD"
+      group: "feffi"
+      groups:
+        - "uucp"
+        - "wheel"
+        - "games"
+        - "rfkill"
+      shell: "/usr/bin/zsh"
   roles:
-    - { role: feffi.user }
+    - { role: ansible-user }
 ```

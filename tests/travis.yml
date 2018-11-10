@@ -3,5 +3,14 @@
   connection: local
   vars:
     user:
+      name: "feffi"
+      password: "SOMEPASSWORD"
+      group: "feffi"
+      groups:
+        - "uucp"
+        - "wheel"
+        - "games"
+        - "rfkill"
+      shell: "/usr/bin/zsh"
   roles:
     - { role: ansible-user }
