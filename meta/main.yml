@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Kevin Wennemuth
+  description: Ansible role to configure/add a user.
+  license: MIT
+  min_ansible_version: 2.7.0.0
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  galaxy_tags:
+    - system
+    - user
+    - config
+dependencies:
+  - { role: ansible-shell,
+      ansible_shell: []
+    }

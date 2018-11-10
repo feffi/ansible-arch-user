@@ -1,0 +1,16 @@
+---
+user: {
+  name: "feffi",
+  group: "feffi",
+  groups: [
+    "uucp",
+    "wheel",
+    "games",
+    "rfkill"
+  ],
+  shell: "/usr/bin/zsh",
+  email: "feffi@feffi.org",
+  passwordless_sudo: [
+    "ALL"
+  ]
+}
