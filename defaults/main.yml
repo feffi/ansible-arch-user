@@ -1,5 +1,5 @@
 ---
-ansible_user: {
+user: {
   # The username/login to set
   name: "feffi",
   # The password in cleartext to set

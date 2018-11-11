@@ -1,19 +1,19 @@
 ---
 - name: Create user group
   group:
-    name: "{{ ansible_user.group }}"
+    name: "{{ user.group }}"
     state: present
   tags:
     - user
 
 - name: Create user and assign to group
   user:
-    name: "{{ ansible_user.name }}"
-    group: "{{ ansible_user.group }}"
-    password: "{{ ansible_user.password|password_hash('sha512') }}"
-    shell: "{{ ansible_user.shell }}"
+    name: "{{ user.name }}"
+    group: "{{ user.group }}"
+    password: "{{ user.password|password_hash('sha512') }}"
+    shell: "{{ user.shell }}"
     update_password: on_create
-    groups: "{{ ansible_user.groups }}"
+    groups: "{{ user.groups }}"
     append: yes
   tags:
     - user
