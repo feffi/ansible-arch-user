@@ -26,7 +26,7 @@ Just add the role to your ``requirements.yml`` file:
 ## Role Defaults Variables
 
 ```yaml
-user: {
+ansible_user: {
   # The username/login to set
   name: "feffi",
   # The password in cleartext to set
@@ -51,7 +51,7 @@ Example:
 ```yaml
 - hosts: all
   vars:
-    user:
+    ansible_user:
       # The username/login to set
       name: "feffi"
       # The password in cleartext to set
