@@ -8,15 +8,20 @@ Ansible role to configure/add a user.
 
 ```yaml
 user: {
+  # The username/login to set
   name: "feffi",
+  # The password in cleartext to set
   password: "SOMEPASSWORD",
+  # The primary group of the new user
   group: "feffi",
+  # Additional groups the new user belongs to
   groups: [
     "uucp",
     "wheel",
     "games",
     "rfkill"
   ],
+  # The login shell of the user
   shell: "/usr/bin/zsh"
 }
 
@@ -28,14 +33,19 @@ Example:
 - hosts: all
   vars:
     user:
+      # The username/login to set
       name: "feffi"
+      # The password in cleartext to set
       password: "SOMEPASSWORD"
+      # The primary group of the new user
       group: "feffi"
+      # Additional groups the new user belongs to
       groups:
         - "uucp"
         - "wheel"
         - "games"
         - "rfkill"
+      # The login shell of the user
       shell: "/usr/bin/zsh"
   roles:
     - { role: ansible-user }
