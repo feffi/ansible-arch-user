@@ -2,7 +2,7 @@
 - hosts: 127.0.0.1
   connection: local
   vars:
-    ansible_user:
+    ansible_arch_user:
       name: "feffi"
       password: "SOMEPASSWORD"
       group: "feffi"
