@@ -16,7 +16,7 @@ galaxy_info:
     - user
     - config
 dependencies:
-  - { role: ansible-pacman,
+  - { role: ansible-arch-pacman,
         ansible_pacman: {
         install: [
           "zsh",
